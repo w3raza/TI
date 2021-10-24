@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="library" type="lib-type" />
+  <xsd:complexType name="lib-type" >
+    <xsd:sequence>
+      <xsd:element name="division" type="div-type" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="div-type" >
+    <xsd:sequence>
+      <xsd:element name="div_name" type="xsd:string" maxOccurs="1"/>
+      <xsd:element name="book" type="book-type" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="book-type" >
+    <xsd:sequence>
+      <xsd:element name="author" type="author-type" maxOccurs="2"/>
+      <xsd:element name="title" type="xsd:string" maxOccurs="1"/>
+      <xsd:element name="price" type="Quantity10to200" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Quantity10to200">
+        <xsd:restriction base="xsd:float">
+          <xsd:minExclusive value="10"/>
+          <xsd:maxExclusive value="200"/>
+        </xsd:restriction> 
+      </xsd:simpleType>
+  <xsd:complexType name="author-type" >
+    <xsd:sequence>
+      <xsd:element name="last_name" type="xsd:string" maxOccurs="1"/>
+      <xsd:element name="name" type="xsd:string" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

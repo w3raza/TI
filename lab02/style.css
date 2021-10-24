@@ -1,0 +1,46 @@
+division {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 70%;
+    display: block;
+    text-align: left;
+    border-width: 3px;
+    border-style: double;
+    border-color: black;
+    padding: 1%;
+}
+
+book {
+    display: block;
+    text-align: left;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2%;
+    margin-top: 15px;
+}
+
+division book:nth-child(odd) {
+    background: rgb(170, 210, 223);
+}
+
+division book:nth-child(even) {
+    background: rgb(197, 197, 197);
+}
+
+div_name {
+    font-size: 30px;
+}
+
+last_name {
+    color: rgb(168, 6, 6);
+    text-decoration: underline;
+}
+
+name {
+    color: rgb(38, 138, 38);
+}
+
+title {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}

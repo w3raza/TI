@@ -1,0 +1,9 @@
+<!ELEMENT library ( division*)  >
+<!ELEMENT division (div_name, book+) >
+<!ELEMENT book (author, title, author?, price) >
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT author (last_name, name)>
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT div_name (#PCDATA) >
+<!ELEMENT last_name (#PCDATA) >
+<!ELEMENT price (#PCDATA)>
