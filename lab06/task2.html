@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript – formularz</title>
+
+    <script type="text/javascript">        
+
+        function emailCheck(){
+            var string1=document.form1.pole3.value;
+            if (string1.indexOf("@")==-1){
+                alert("Proszę podać poprawny adres e-mail!");
+                document.form1.email.focus();
+            } 
+        }
+
+        function checkData(){
+            if (document.form1.pole1.value.length<4 || document.form1.pole2.length<4){
+                alert("Niepoprawne imie lub nazwisko");
+                document.form1.pole2.focus();
+            }
+        }
+
+        function validateForm() {
+                var name = document.form1.pole1.value;
+                var surname = document.form1.pole2.value;
+                var email = document.form1.pole3.value;
+                var year = document.form1.pole4.value;
+
+                if (name == null || name == "") {
+                    document.getElementById("surname").innerHTML = "Brak podanego nazwiska";
+                }
+
+                if(surname == null || surname == "") {
+                    document.getElementById("name").innerHTML = "Brak podanego imienia";
+                }
+
+                if(email == null || email === "") {
+                    document.getElementById("email").innerHTML = "Brak podanego e-maila";
+                }
+
+                if(year == null || year == "0") {
+                    document.getElementById("year").innerHTML = "Brak podanego roku";
+                }
+
+                if ((document.form1.pole1.value=="" || document.form1.pole1.value==null)||(document.form1.pole2.value==""  || document.form1.pole2.value==null)||(document.form1.pole3.value==""  || document.form1.pole3.value==null)||(document.form1.pole4.value=="0"  || document.form1.pole4.value==null))
+                    return false;
+                else{
+                if(document.form1.pole5.value=="")
+                    document.form1.pole5.value = "brak";
+                alert("nazwisko: "+document.form1.pole1.value + "\nimie: " + document.form1.pole2.value + "\nemail: " + document.form1.pole3.value + "\nrok: " + document.form1.pole4.value + "\nuwagi:" + document.form1.pole5.value);
+                }
+            } 
+    </script>
+</head>
+    <body>
+        <form name="form1" onsubmit="return validateForm()">
+            <p>nazwisko (*pole wymagane)</p>
+            <input type="text" size="20" name="pole1" onblur="checkData() "/><br/>
+            <div id="surname" style="color:red;"></div>
+
+            <p>imie(*pole wymagane)</p>
+            <input type="text" size="20" name="pole2" onblur="checkData() "/><br/>
+            <div id="name" style="color:red;"></div>
+
+            <p>Adres e-mail: (*pole wymagane)</p>
+            <input type="text" size="20" name="pole3" onblur="emailCheck()"/><br/>
+            <div id="email" style="color:red;"></div>
+
+            <p>rok studiow (*pole wymagane)</p>
+            <select name="pole4" size="1">
+                <option value="0">Wybierz rok</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br/>
+            <div id="year" style="color:red;"></div>
+
+            <p>uwagi</p>
+            <textarea name="pole5" rows="3" cols="25"></textarea><br/>
+            <input type="submit" name="result" value="Submit"/>
+        </form>
+    </body>
+</html>
