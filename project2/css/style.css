@@ -1,0 +1,286 @@
+#main {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Courier New";
+  float: left;
+  padding: 20px;
+  width: 74%;
+  min-height: 700px;
+}
+
+div {
+  display: block;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  display: block;
+  margin: 0;
+}
+
+#top {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 15px;
+}
+
+#left-menu {
+  font-weight: 700;
+  float: left;
+  background-color: lightgray;
+  width: 20%;
+  padding: 10px;
+  min-height: auto;
+}
+
+#footer {
+  clear: both;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* article {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+} */
+
+.breakInText {
+  width: 100%;
+  max-width: 950px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  /* word-break: break-word; */
+  padding: 3px 2px;
+  min-height: 1em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(33, 128, 133);
+}
+
+h3 {
+  font-size: 20px;
+  background-color: rgb(223, 253, 255);
+}
+
+#signin,#signup, #logout {
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#notes{
+  display:block;
+  max-height: auto;
+}
+
+.button{
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+table{ 
+  border-collapse: collapse; 
+  background:white;
+  border-radius:6px;
+  overflow:hidden;
+  max-width:800px; 
+  width:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+thead tr{ 
+    height:60px;
+    background:#FFED86;
+    font-size:16px;
+    height:48px; border-bottom:1px solid #E3F1D5 ;
+}
+
+td,th{
+  position:relative;
+  padding-left:8px; 
+  text-align:left;
+	text-align:right ;
+	text-align:center ;
+	text-align:center;
+}
+
+.chart{
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  position:relative;
+}
+
+
+a {
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+a.active {
+  background-color: #555;
+  color: black;
+}
+
+a:hover:not(.active) {
+  background-color: #555;
+  color: black;
+}
+
+.noHover {
+  background-color: unset !important;
+  color: unset !important;
+}
+
+#readMore {
+  cursor: pointer;
+  color: blue;
+}
+
+#login,
+#register {
+  clear: none;
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-size: cover;
+  width: 400px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+}
+
+.container,
+.form__input,
+.form__button {
+  font: 500 1rem "Quicksand", sans-serif;
+}
+
+.form--hidden {
+  display: none;
+}
+
+.form > *:first-child {
+  margin-top: 0;
+}
+
+.form > *:last-child {
+  margin-bottom: 0;
+}
+
+.form__title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form__input-group {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+  border-color: var(--color-primary);
+  background: #ffffff;
+}
+
+.form__input--error {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.form__input-error-message {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-error);
+}
+
+.form__button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000000;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  background: var(--color-primary);
+}
+
+.form__button:hover {
+  background: var(--color-primary-dark);
+}
+
+.form__button:active {
+  transform: scale(0.98);
+}
+
+.form__text {
+  color: #000;
+  text-align: center;
+}
+
+.form__link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Mózg na detoksie">
+  <meta name="author" content="Wiktoria Zaczyk">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="rest.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <title>Mózg na detoksie</title>
+</head>
+
+<body onload="isLoged()">
+  <div id="container">
+    <div id="top">
+      <a id="logout" onclick="log_out()">Wyloguj</a>
+      <a id="signin" onclick="login_form()">Zaloguj się</a>
+      /
+      <a id="signup" onclick="reg_form()">Rejestracja</a>
+    </div>
+    <div id="left-menu">
+      <nav><a id="notes" class="button" onclick="notes()">Notatki z książki</a>
+        <a href="https://www.drperlmutter.com/books/brain-wash/" target="_blank">Strona autorów</a> <br />
+        <a id="ankieta" class="button" onclick="ankieta_form()">Ankieta</a><br />
+        <a id="answerOff" class="button" onclick="resultsOffline()">Wyniki Offline</a>
+        <a id="answer" class="button" onclick="resultsOnline()">Wyniki</a><br /><br />
+        <a id="get" class="button" onclick=getdata()>Wykresy</a><br /><br />
+        <a id="send" class="button" onclick=send_data()>Wyslij dane</a><br /><br />
+        <a id="list" class="button" onclick="_list()">Lista</a> <br /><br />
+        <a id="delete" class="button" onclick="_del_list()">Usuniecie</a> <br /><br />
+        <!-- <a id="upgrade" class="button" onclick="_upd_list()">Poprawa</a> <br /><br />
+        <a id="find" class="button" onclick="_upd_find()">Znajdz</a> <br /><br /> -->
+      </nav>
+    </div>
+    <div id="main">
+      <div id="content"></div>
+      <div id="data">
+        <h1>Mózg na detoksie</h1>
+        <article>
+          <em>"Oczyść swój umysł, by sprawniej myśleć, wzmocnić relacje i znaleźć szczęście"</em>
+          <br>
+          <strong>Niektórzy się poddali i po prostu radzą sobie z codziennością, jak tylko mogą. Ale wcale tak nie musi
+            być.</strong>
+
+          <div class="breakInText"></div>
+
+          Nawet w te dni, kiedy mierzymy się z wielkimi wyzwaniami lub nawet porażkami albo kiedy doświadczamy zawodu
+          lub
+          straty, wciąż
+          możemy żyć z optymizmem i zadowoleniem. Prawdziwe zdrowie to energiczny stan mentalnego i fizycznego dobrego
+          samopoczucia. To stan dobrobytu, który odnajdujemy dzięki odzyskaniu więzi z samym sobą, z innymi i z
+          przestrzenią
+          życiową współdzieloną z innymi ludźmi. Aby to osiągnąć, musimy przyjrzeć się głównemu graczowi: mózgowi.
+
+          <div class="breakInText"></div>
+          <h2>Życie pop wpływem</h2>
+
+          <h3>Syndrom oddzielenia</h3>
+
+          <em>"W materialistycznym stylu życia nie istnieje koncepcja przyjaźni, miłości, istnieje tylko praca,
+            dwadzieścia
+            cztery
+            godziny na dobę, niczym maszyna. Dlatego we współczesnym społeczeństwie w pewnym momencie też stajemy się
+            częścią
+            tej
+            wielkiej, ruchowej maszyny."</em>
+          <div class="breakInText"></div>
+
+          <strong>Syndrom oddzielenia:</strong>
+          bezmyślna aktywność, samotność, przewlekłe stany zapalne, natychmiastowa nagroda, narcyzm,
+          niekorzystne relacje, przewlekły stres, impulsywność.
+          <div class="breakInText"></div>
+          Partycypacja (ponosić wspólnie z kimś koszty jakiegoś przedsięwzięcia lub mieć udział w zyskach) we
+          współczesnej
+          kulturze nieprzerwanej konsumpcji dokonuje fizycznych zmian w naszych mózgach. Kultura ta niejako usprawnia
+          ścieżki
+          neuronowe, które czynią nas impulsywnymi, nerwowymi, zalęknionymi, bojaźliwymi i żądnymi szybkich,
+          natychmiastowych
+          rozwiązań. Takie przeprogramowanie mózgu sprawia, że poświęcamy więcej czasu i pieniędzy na rzeczy, które nie
+          dają nam
+          długotrwałego poczucia szczęścia. Czujemy się nieprzerwanie niezadowoleni. I właśnie tego chce dla nas wielki
+          biznes,
+          ponieważ prowadzi to do zwiększania jego zysków. Tracimy poczucie własnego ja i
+
+          <a id="readMore" onclick="read()"><u>...czytaj więcej</u></a>
+        </article>
+      </div>
+      <div id="result"></div>
+      <canvas id="myChart1" class="chart"></canvas>
+      <canvas id="myChart2" class="chart"></canvas>
+      <canvas id="myChart3" class="chart"></canvas>
+      <canvas id="myChart4" class="chart"></canvas>
+    </div>
+  </div>
+  <div id="footer">
+    <p>Wiktoria Zaczyk</p>
+    <p>gusia@student.agh.edu.pl</p>
+    <p>Treść na podstawie ksiązki "Mózg na detoksie" David i Austin Perlmutter</p>
+  </div>
+</body>
+
+</html>

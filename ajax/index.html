@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css">
+	<script src="add.js"></script>
+</head>
+
+<body onload="set_up_var()">
+<div id="main">
+	<div id="control">
+		<div id="add" onclick="add_mode()"><button type="button">Dodaj rekord</button></div>
+		<div id="show" onclick="show_mode()"><button type="button">Lista rekordów</button></div>
+		<div class="last"> </div>
+	</div>
+	
+	<div id="data">
+		<form onsubmit="add_handle(event)">
+		<div id="h">
+			<div class="txt">Tytuł:</div> <div class="inp"><input class="inp_txt" type="text"> </div> <div class="last"> </div>
+			<div class="txt">Autor:</div> <div class="inp"><input class="inp_txt" type="text"> </div> <div class="last"> </div>
+		</div>
+			<input type="submit" value="Dodaj">
+		</form>
+	</div>
+</div>
+</body>
+
+</html>

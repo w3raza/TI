@@ -44,7 +44,7 @@ print ("Content-type: text/html")
 print ()
 print ("<!DOCTYPE html>")
 print ("<html><head>")
-print ('<link rel="stylesheet" href="../lab5.css">')
+print ('<link rel="stylesheet" href="../lab05/style.css">')
 print ("<title>Library</title>")
 print ("</head><body>")
 print_form_file(new_rekord);
